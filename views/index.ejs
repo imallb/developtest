@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="/dist/bundle.js"></script>
+</head>
+
+<body>
+<div id="app">
+	<custom-input :value="searchText" @on-result-change="onSearchText"></custom-input>
+	<p>{{searchText}}</p>
+
+	<switchbtn :result="result" @on-result-change="onResultChange"></switchbtn>
+	<input type="button" value="change" @click="change">
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+require(['js/a','js/b'],function(){
+	new Vue({
+		el:'#app',
+		data:{
+			searchText:<%= text %>,
+			result:<%- change %>
+		},
+		methods: {
+			change() {
+	            this.result = !this.result;
+	        },
+	        onResultChange(val){
+	            this.result=val;
+	        },
+	        onSearchText(val){
+	            this.searchText=val;
+	            console.log(val)
+	        }
+    	}
+	})
+})
+</script>
