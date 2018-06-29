@@ -11,5 +11,15 @@
 <h3>developtest为了更好的学习前端</h3>
 <p>我一直相信，学会的知识如果用不到会逐渐遗忘，而且为了更好更快的学习webpack，vue等前端知识，我把它们整合起来一起使用，结合以前学习的知识整合了一个比较合适个人使用的一个小项目。因为之前使用的是公司vue+webpack网站项目，觉得纯vue+webpack做的项目局限性有点大（可能是我自己不太会用或者不怎么习惯），因此自己就结合自身修改了这个项目。developtest初期只是用来测试和开发接口以及网站跨域等问题，至于后期要不要做成一个站点项目还需要策划和代码编写其他功能。</p>
 
+<h3>developtest项目目录</h3>
+<p>
+  config:配置文件夹，webpack以及其他配置；<br>
+  routers:路由文件夹<br>
+  src:存放压缩打包的js文件，最终生成的bundle.js文件在static\dist目录下存放；<br>
+  static:存放静态文件，如图片，js，css等；<br>
+  views:网站html模板页面存放；<br>
+  index.js:启动页面；<br>
+</p>
+
 <h3>developtest启动</h3>
 <p>npm run dev</p>
